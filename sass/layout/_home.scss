@@ -1,0 +1,137 @@
+.about-us {
+  padding: 10px 0;
+
+  &__heading {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  &__wrapper {
+    @include wrapper(300px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__branch {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+
+    &:nth-child(1) {
+      .about-us__image {
+        background-image: url('../images/girl.jpg');
+      }
+    }
+
+    &:nth-child(2) {
+      .about-us__image {
+        background-image: url('../images/hoody.jpg');
+      }
+    }
+
+    &:nth-child(3) {
+      .about-us__image {
+        background-image: url('../images/adult.jpg');
+      }
+    }
+
+    &:nth-child(4) {
+      .about-us__image {
+        background-image: url('../images/man.jpg');
+      }
+    }
+  }
+
+  &__image {
+    width: 50%;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-position: top;
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  &__person {
+    &-heading {
+      margin-top: 30px;
+      font-size: 2rem;
+    }
+  }
+
+  &__text {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    text-align: justify;
+  }
+}
+
+// Style for section offer
+.offer {
+  padding: 50px 0;
+  background-color: #405d78;
+  color: $text-color-light;
+
+  &__wrapper {
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    margin: 20px 0;
+    background-color: #fff;
+    transition: transform 0.5s linear;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:first-child {
+      position: relative;
+      text-align: center;
+
+      .item-new-symbol {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 25px;
+        height: 25px;
+        background-color: $brand-color;
+        border-radius: 50%;
+      }
+    }
+
+    &-heading {
+      font-size: 2.2rem;
+      color: $text-color;
+
+      &-new {
+        color: $text-color;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

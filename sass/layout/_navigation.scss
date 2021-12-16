@@ -1,0 +1,63 @@
+.nav {
+  background: #4e4e4e;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+
+  &__wrapper {
+    @include wrapper(300px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $text-color-light;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__links {
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #4e4e4e;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  //  Styles for button hamburger
+
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+
+    &:active {
+      display: none;
+    }
+
+    &-item {
+      width: 25px;
+      height: 2px;
+      background-color: $light-grey;
+
+      &:nth-child(2) {
+        margin: 6px 0;
+      }
+    }
+  }
+}

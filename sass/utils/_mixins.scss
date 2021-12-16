@@ -1,0 +1,22 @@
+/// Type text
+/// @author Zenon Marek Raubuć
+// @param{dimension, dimension, color} $size $weight $color
+@mixin type-text($size, $weight,  $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  @content;
+}
+
+/// Make a view and content in terminate frame
+/// @author Zenon Marek Raubuć
+/// @param {dimension} $max-width, $width
+
+@mixin wrapper($max-width) {
+  max-width: $max-width;
+  margin: 0 auto;
+  @content;
+}
+
+
+
