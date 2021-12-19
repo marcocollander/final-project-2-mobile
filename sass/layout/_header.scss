@@ -24,7 +24,7 @@
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
-    @include wrapper(300px);
+    padding-left: 20px;
   }
 
   &__heading {
@@ -48,8 +48,8 @@
     background: none;
     text-transform: uppercase;
     font-size: 1.4rem;
-    font-weight: 500;
-    color: #fff;
+    font-weight: 700;
+    color: $brand-color;
     letter-spacing: 1px;
     transition: 1s linear;
     cursor: pointer;
@@ -61,7 +61,7 @@
   }
 
   &__image-author {
-    @include wrapper(300px);
+    padding-left: 20px;
     margin-top: -20px;
     color: $text-color-light;
   }
@@ -72,6 +72,30 @@
 
     &:active {
       color: aquamarine;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .header {
+    &__heading {
+      font-size: 3.2rem;
+    }
+
+    &__text {
+      font-size: 2.4rem;
+    }
+
+    &__btn {
+      font-size: 2rem;
+    }
+
+    &__image-author {
+      font-size: 1.2rem;
+    }
+
+    &__link-to-author {
+      font-size: 1.2rem;
     }
   }
 }

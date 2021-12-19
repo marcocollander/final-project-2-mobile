@@ -6,11 +6,10 @@
     margin-bottom: 30px;
     font-size: 2.8rem;
     text-align: center;
-    letter-spacing: 1px;
   }
 
   &__wrapper {
-    @include wrapper(300px);
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -21,7 +20,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
+    padding: 10px;
+    margin: 10px 0;
 
     &:nth-child(1) {
       .about-us__image {
@@ -59,8 +59,9 @@
 
   &__person {
     &-heading {
-      margin-top: 30px;
+      margin: 30px 0;
       font-size: 2rem;
+      text-align: center;
     }
   }
 
@@ -68,6 +69,7 @@
     margin-top: 20px;
     font-size: 1.6rem;
     text-align: justify;
+    line-height: 1.8rem;
   }
 }
 
@@ -85,7 +87,7 @@
   &__heading {
     margin-bottom: 50px;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   &__container {
@@ -135,3 +137,72 @@
     }
   }
 }
+
+
+@media (min-width: 576px) {
+  .about-us__image {
+    width: 35%;
+  }
+
+  .offer__item {
+    width: 60%;
+  }
+}
+
+@media(min-width: 768px) {
+  .about-us {
+    &__branch {
+      flex-direction: row;
+
+      &:nth-child(1) {
+        .about-us__person-heading {
+          text-align: left;
+        }
+      }
+
+      &:nth-child(2) {
+        .about-us__person-heading {
+          text-align: right;
+        }
+
+        .about-us__image {
+          order: 2;
+        }
+      }
+
+      &:nth-child(3) {
+        .about-us__person-heading {
+          text-align: left;
+        }
+      }
+
+      &:nth-child(4) {
+        .about-us__person-heading {
+          text-align: right;
+        }
+
+        .about-us__image {
+          order: 2;
+        }
+      }
+
+    }
+  }
+
+  .offer {
+    &__heading {
+      font-size: 3.6rem;
+    }
+
+    &__container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 25%;
+      margin: 35px;
+    }
+  }
+}
+
