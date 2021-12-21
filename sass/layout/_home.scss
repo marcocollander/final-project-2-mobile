@@ -206,3 +206,43 @@
   }
 }
 
+@media(min-width: 992px){
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .about-us {
+    padding: 40px 0;
+    &__heading {
+      @include wrapper(960px);
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    &__wrapper {
+      @include wrapper(960px);
+      padding: 0;
+    }
+
+    &__image {
+      padding: 0;
+    }
+
+    &__branch {
+
+    }
+
+  }
+
+
+  @media(min-width: 992px){
+    .offer {
+      &__wrapper {
+        @include wrapper(960px);
+      }
+    }
+  }
+
+}
+

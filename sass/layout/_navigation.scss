@@ -83,3 +83,12 @@
     }
   }
 }
+
+@media(min-width: 992px){
+  .nav {
+    &__wrapper {
+      @include wrapper(960px);
+      padding: 0;
+    }
+  }
+}

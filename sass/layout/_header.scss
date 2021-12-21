@@ -99,3 +99,11 @@
     }
   }
 }
+
+@media (min-width: 992px) {
+  .header {
+    &__wrapper {
+      @include wrapper(960px);
+    }
+  }
+}

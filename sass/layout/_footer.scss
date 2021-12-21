@@ -50,3 +50,13 @@
     }
   }
 }
+
+
+@media(min-width: 992px){
+  .footer {
+    &__wrapper {
+      @include wrapper(960px);
+    }
+  }
+}
+
