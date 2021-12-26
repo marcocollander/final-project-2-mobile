@@ -29,6 +29,10 @@
     &--hidden {
       display: none;
     }
+
+    &-item:nth-child(3) {
+      cursor: not-allowed;
+    }
   }
 
   &__btn {
@@ -38,6 +42,7 @@
     align-items: center;
     border: none;
     background: none;
+    cursor: not-allowed;
 
     &:active {
       display: none;
@@ -55,9 +60,12 @@
   }
 }
 
-@media (min-width: 576px) {
-  .nav__link {
-    font-size: 2rem;
+@media (min-width: 412px) {
+  .nav {
+    &__link {
+      font-size: 2.2rem;
+
+    }
   }
 }
 
