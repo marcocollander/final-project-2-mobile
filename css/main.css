@@ -248,13 +248,12 @@ a {
   color: white;
 }
 .offer__wrapper {
-  width: 80vw;
   margin: 0 auto;
 }
 .offer__heading {
   margin-bottom: 50px;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
 }
 .offer__container {
   display: flex;
@@ -307,6 +306,10 @@ a {
   }
 }
 @media (min-width: 768px) {
+  .about-us__heading {
+    padding: 0 20px;
+    text-align: left;
+  }
   .about-us__branch {
     flex-direction: row;
   }
@@ -328,9 +331,13 @@ a {
   .about-us__branch:nth-child(4) .about-us__image {
     order: 2;
   }
+  .about-us__person {
+    padding: 0 20px;
+  }
 
   .offer__heading {
     font-size: 3.6rem;
+    text-align: left;
   }
   .offer__container {
     flex-direction: row;
