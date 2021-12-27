@@ -52,13 +52,7 @@
     font-weight: 700;
     color: $brand-color;
     letter-spacing: 1px;
-    transition: 1s linear;
     cursor: pointer;
-
-    &:active {
-      background-color: #fff;
-      color: #000;
-    }
   }
 
   &__image-author {
@@ -70,10 +64,6 @@
   &__link-to-author {
     color: $secondary-color;
     margin: 0 5px;
-
-    &:active {
-      color: aquamarine;
-    }
   }
 }
 
@@ -118,6 +108,25 @@
   .header {
     &__wrapper {
       @include wrapper(960px);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    &__btn {
+      transition: 1s linear;
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+
+    &__link-to-author {
+      &:hover {
+        color: aquamarine;
+      }
     }
   }
 }

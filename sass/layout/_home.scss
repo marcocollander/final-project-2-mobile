@@ -2,7 +2,7 @@
   padding: 10px 0;
 
   &__heading {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 30px;
     font-size: 2.8rem;
     text-align: center;
@@ -75,7 +75,7 @@
 
 // Style for section offer
 .offer {
-  padding: 50px 0;
+  padding: 60px 0;
   background-color: #405d78;
   color: $text-color-light;
 
@@ -84,7 +84,8 @@
   }
 
   &__heading {
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 40px;
     text-align: center;
     font-size: 2.5rem;
   }
@@ -104,11 +105,6 @@
     aspect-ratio: 1 / 1;
     margin: 20px 0;
     background-color: #fff;
-    transition: transform 0.5s linear;
-
-    &:hover {
-      transform: scale(1.05);
-    }
 
     &:first-child {
       position: relative;
@@ -151,7 +147,8 @@
 @media(min-width: 768px) {
   .about-us {
     &__heading {
-      padding: 0 20px;
+      margin-top: 60px;
+      margin-left: 20px;
       text-align: left;
     }
 
@@ -189,7 +186,6 @@
           order: 2;
         }
       }
-
     }
 
     &__person {
@@ -199,6 +195,7 @@
 
   .offer {
     &__heading {
+      padding: 40px 0;
       font-size: 3.6rem;
       text-align: left;
     }
@@ -215,18 +212,11 @@
   }
 }
 
-@media(min-width: 992px){
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
+@media(min-width: 992px) {
   .about-us {
-    padding: 40px 0;
-
     &__heading {
       @include wrapper(960px);
+      margin-top: 60px;
       margin-bottom: 20px;
       text-align: left;
     }
@@ -241,14 +231,21 @@
     }
   }
 
+  .offer {
+    &__wrapper {
+      @include wrapper(960px);
+    }
+  }
+}
 
-  @media(min-width: 992px){
-    .offer {
-      &__wrapper {
-        @include wrapper(960px);
+@media (min-width: 1200px) {
+  .offer {
+    &__item {
+      transition: transform 0.5s linear;
+
+      &:hover {
+        transform: scale(1.05);
       }
     }
   }
-
 }
-

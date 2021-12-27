@@ -21,12 +21,6 @@
     padding: 5px;
 
     .fab {
-      transition: transform 0.3s;
-
-      &:hover {
-        transform: scale(1.2);
-      }
-
       &:first-child {
         margin-right: 20px;
       }
@@ -56,6 +50,22 @@
   .footer {
     &__wrapper {
       @include wrapper(960px);
+    }
+  }
+}
+
+
+@media(min-width: 1200px){
+  .footer {
+    &__social-media{
+      .fab {
+        transition: transform 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
     }
   }
 }
